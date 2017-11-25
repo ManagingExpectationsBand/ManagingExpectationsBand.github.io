@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+html, body {
+	background-image: url("assets/WallLogo1080pPeople3.png"); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	overflow-x: hidden;
+}
+header {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	z-index: 3;
+}
+h1 {
+	font-family: 'Oswald', bold;
+	font-size: 36pt;
+	color: #FFFFFF;
+	background-color: #000000;
+
+	position: relative;
+	padding: 5px;
+	margin: 0;
+	z-index: 3;
+}
+h2 {
+	font-family: 'Oswald', bold;
+	font-size: 24pt;
+	color: #FFFFFF;
+	background-color: #000000;
+  opacity: 0.85;
+  
+  border: 2px solid #FFFFFF;
+  border-radius: 16px;  
+  
+	position: relative;
+	padding: 5px;
+	margin-top: 2.5%;
+  margin-bottom: 0.5%;
+	z-index: 3;
+}
+p {
+	font-family: 'Montserrat';
+	font-size: 18pt;
+	color: #FFFFFF;
+	background-color: #000000;
+	opacity: 0.85;
+  
+  border: 2px solid #FFFFFF;
+  border-radius: 16px;
+
+	padding: 5px;
+	margin: 0;
+	z-index: 1;
+}
+
+ul {
+  font-family: 'Montserrat';
+	font-size: 18pt;
+	color: #FFFFFF;
+	background-color: #000000;
+	opacity: 0.85;
+  
+  border: 2px solid #FFFFFF;
+  border-radius: 16px;
+  
+	padding: 5px;
+	margin: 0;
+	z-index: 1;
+}
+
+a {
+	
+}
+
+#spacer {
+  margin-top: 15%;
+}
