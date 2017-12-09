@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div id="navcontainer" class="container">
-        <a id="logoname" class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logos/Logo4_256.png" height=1.75em style="padding-right: 30px;"/> Managing Expectations</a>
+        <a id="logoname" class="navbar-brand js-scroll-trigger" href="#page-top"><img id="navlogo" src="img/logos/Logo4_256.png" height=1.75em style="padding-right: 30px;"/> Managing Expectations</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -630,15 +630,23 @@
     
       <script>
           $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
-
-var $img = $("#navcontainer").find('img');
-$img.on('load', function() {
-  $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
-});
-
-window.onresize = function() {
-  $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
-}</script>
+          
+          var $img = $("#navcontainer").find('img');
+          
+          $img.on('load', function() {
+            $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
+          });
+          if ($(window).width() < 800){
+            $("#navlogo").css("width", 0);
+            $("#navlogo").css("padding-right", 0);
+        }
+          window.onresize = function() {
+        $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
+        if ($(window).width() < 800){
+            $("#navlogo").css("width", 0);
+            $("#navlogo").css("padding-right", 0);
+        }
+        }</script>
 
   </body>
 
