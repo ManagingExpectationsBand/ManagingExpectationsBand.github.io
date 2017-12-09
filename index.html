@@ -29,8 +29,8 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Managing Expectations</a>
+      <div id="navcontainer" class="container">
+        <a id="logoname" class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logos/Logo4_256.png" height=1.75em style="padding-right: 30px;"/> Managing Expectations</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -56,9 +56,9 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in"></div>
-            <div class="intro-heading text-uppercase"><br/><br/></div>
+            <div class="intro-heading text-uppercase" style="padding-top: 30px;"><br/><br/></div>
             <div class="intro-heading text-uppercase"></div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">Tell Me More</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about" >Tell Me More</a>
         </div>
       </div>
     </header>
@@ -183,7 +183,8 @@
               <p class="text-muted">Graphic Design</p>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
+          <!--
+            <div class="col-md-4 col-sm-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -239,6 +240,7 @@
               <p class="text-muted">Photography</p>
             </div>
           </div>
+-->
         </div>
       </div>
     </section>
@@ -474,7 +476,8 @@
       </div>
     </div>
 
-    <!-- Modal 3 -->
+
+<!-- Modal 3 
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -487,7 +490,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Project Details Go Here 
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
@@ -507,8 +510,8 @@
         </div>
       </div>
     </div>
-
-    <!-- Modal 4 -->
+-->
+    <!-- Modal 4 
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -521,7 +524,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Project Details Go Here 
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
@@ -541,8 +544,8 @@
         </div>
       </div>
     </div>
-
-    <!-- Modal 5 -->
+-->
+    <!-- Modal 5 
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -555,7 +558,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Project Details Go Here 
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
@@ -575,8 +578,8 @@
         </div>
       </div>
     </div>
-
-    <!-- Modal 6 -->
+-->
+    <!-- Modal 6 
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -589,7 +592,7 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
+                  <!-- Project Details Go Here 
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
@@ -609,7 +612,8 @@
         </div>
       </div>
     </div>
-
+-->
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -623,6 +627,18 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    
+      <script>
+          $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
+
+var $img = $("#navcontainer").find('img');
+$img.on('load', function() {
+  $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
+});
+
+window.onresize = function() {
+  $("#navcontainer").find('img').css("height", $("#logoname").outerHeight());
+}</script>
 
   </body>
 
